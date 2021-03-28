@@ -1,12 +1,13 @@
 def sublist_max(profits):
 
-    max_profit = 0
+    profit_max = 0
+    temp = 0
 
-    
+    for money in profits:
+        temp = temp + money if temp + money > 0 else 0
+        profit_max = max(profit_max, temp)
 
-
-    return max_profit
-
+    return profit_max
 
 # 테스트
 print(sublist_max([7, -3, 4, -8]))
